@@ -1,61 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Fork Me! FCC: Test Suite Template</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-
-  <body>
-    <script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
       document.write("Hello,World!")
     </script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <main id="main">
-      <h1 id="title">Steven Paul Jobs</h1>
-      <p>The man who Led Apple to create the glorious iPod, iPhone, and iPad era.</p>
-      <figure id="img-div">
-        <img
-          id = "image"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Steve_Jobs_Headshot_2010-CROP2.jpg/800px-Steve_Jobs_Headshot_2010-CROP2.jpg"
-          alt="Steve Jobs shows off the iPhone 4 at the 2010 Worldwide Developers Conference"
-        />
-        <figcaption id="img-caption">
-          he is Jobs
-        </figcaption>
-      </figure>
-      <section id="tribute-info">
-        <h3 id="headline">Here's a time line of Jobs's life:</h3>
-        <ul>
-          <li><strong>1970s</strong> - After focusing on art and Zen studies outside of college, Jobs took a break from school to start his own business in the late 1970s during the personal computer boom, working with Apple's other founder Steve Wozniak and first investor Mike Markkula to design, develop and market the Apple II line.</li>
-          <li>
-            <strong>1980s</strong> - The first person to see the commercial potential of Xerox PARC's mouse-driven graphical user interface and apply it to the Apple Lisa and a year later to the Macintosh computer, Apple's introduction of this technology greatly enhanced the ease of use and popularity of computers [8].
-          </li>
-          <li>
-            <strong>1985</strong> - fter losing a board battle, Jobs left Apple and founded NeXT (a computer platform development company specializing in higher education and the commercial market) 
-          </li>
-          <li><strong>2000</strong> - Became the official CEO and led Apple to create the glorious iPod, iPhone and iPad era.</li>
-        </ul>
-        <blockquote
-          cite="http://news.rediff.com/report/2009/sep/14/pm-pays-tribute-to-father-of-green-revolution-borlaug.htm"
-        >
-          <p>
-            "Few people have had the impact on the world that Steve Jobs did, and that impact will be long-lasting"
-          </p>
-          <cite>-- Bill Gates Review</cite>
-        </blockquote>
-        <h3>
-          If you have time, you should read more about this incredible human being
-          on his
-          <a
-            id="tribute-link"
-            href="https://en.wikipedia.org/wiki/Steve_Jobs"
-            target="_blank"
-            >Wikipedia entry</a
-          >.
-        </h3>
-      </section>
-    </main>
-    <script  src="js/index.js"></script>
-  </body>
+   <header>
+    <h1 id="title">Personal preference Survey Form</h1>
+    <p id="description">A short survey about your preference</p>
+  </header>
+  <main>
+    <form action="" id="survey-form">
+    <section id="details-section">
+      <label for="name" id="name-label">Name <span>*</span></label>
+      <input type="text" name="name" id="name" placeholder="Your Name" required>
+      <label for="email" id="email-label">Email <span>*</span></label>
+      <input type="email" name="email" id="email" placeholder="Email adress" required>
+      <label for="number" id="number-label">Age <span>*</span></label>
+      <input type="number" id="number" name="number" min="1" max="122" placeholder="Your age" required>
+      <div></div> <!-- placeholder div -->
+      <p>Fields marked with * are required</p>
+    </section>
+    <section id="dropdown-section">
+      <label for="dropdown">Do you have a personal hobby?</label>
+      <select name="dropdown" id="dropdown">
+          <option value="">Please select one</option>
+          <option value="casual">No, I didn't.</option>
+          <option value="casual1">Yes, I do, but rarely.</option>
+          <option value="casual2">Yes, I have, very much</option>
+          
+      </select>
+    </section>
+    <section id="radio-section">
+      <div class="radio-p">
+        <p>How long do you probably spend on your hobby each day?</p>
+      </div>
+      <div class="input-div">
+        <input type="radio" name="radio" id="none-two" value="none-two">
+        <label class="label1" for="none-two"> 0h to 2h</label><br>
+        <input type="radio" name="radio" id="three-four" value="three-four">
+        <label class="label2" for="three-four"> 3h to 4h</label><br>
+        <input type="radio" name="radio" id="four-six" value="four-six">
+        <label class="label3" for="four-six"> 4h to 6h</label><br>
+        <input type="radio" name="radio" id="seven-eight" value="seven-eight">
+        <label class="label4" for="seven-eight"> 7h to 8h</label><br>
+        <input type="radio" name="radio" id="eight-more" value="eight-more">
+        <label class="label5" for="eight-more"> 8h and more</label>
+      </div>
+    </section>
+    <section id="checkbox-section">
+      <div class="checkbox-p">
+        <p>Please choose your favorite hobby from the following list:</p>
+      </div>
+      <div class="input-div">
+        <input type="checkbox" value="kingdom" id="kingdom" name="anticipate">
+        <label for="kingdom">Read</label><br>
+        <input type="checkbox" value="crackdown" id="crackdown" name="anticipate">
+        <label for="crackdown">play games</label><br>
+        <input type="checkbox" value="daysgone" id="daysgone" name="anticipate">
+        <label for="daysgone">Travel</label><br>
+        <input type="checkbox" value="rage" id="rage" name="anticipate">
+        <label for="rage">Watch the movie</label><br>
+        <input type="checkbox" value="psychonauts" id="psychonauts" name="anticipate">
+        <label for="psychonauts">listen to music </label><br>
+        <input type="checkbox" value="stranding" id="stranding" name="anticipate">
+        <label for="stranding">Skydiving</label><br>
+      </div>
+    </section>
+    <section id="text-section">
+      <label for="textarea">What other interests do you have?</label>
+      <textarea name="textarea" id="textarea" cols="30" rows="7" placeholder="interests Title, Next interests title, ..."></textarea>
+    </section>
+    <button type="submit" id="submit">Submit</button>
+    </form>
+  </main>
+  <footer>
+      <p>Coded by <a href="https://github.com/pigpig01/project2/blob/main/index.html">Pig Pig</a></p>
+  </footer>
+</body>
 </html>
